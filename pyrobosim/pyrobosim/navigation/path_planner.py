@@ -1,6 +1,7 @@
 """ Implementation of the generic path planner. """
 import warnings
 from pyrobosim.navigation.a_star import AstarPlanner
+from pyrobosim.navigation.a_star_kevin import AstarKevinPlanner
 from pyrobosim.navigation.rrt import RRTPlanner
 from pyrobosim.navigation.prm import PRMPlanner
 from pyrobosim.navigation.world_graph import WorldGraphPlanner
@@ -26,6 +27,7 @@ class PathPlanner:
             "rrt": RRTPlanner,
             "prm": PRMPlanner,
             "world_graph": WorldGraphPlanner,
+            "astar_kevin" : AstarKevinPlanner
         }
 
         if planner_type not in self.planners:
